@@ -28,10 +28,10 @@ public class CustomerRepositoryIntegrationTest {
 
     @Test
     public void shouldFindACustomerByLastName() throws Exception {
-        Customer customer = new Customer("Mauricio", "Murillo");
+        Customer customer = new Customer("Foo", "Bar");
         customerRepository.save(customer);
 
-        Optional<Customer> customerFound = customerRepository.findByLastName("Murillo");
+        Optional<Customer> customerFound = customerRepository.findByLastName("Bar");
 
         assertThat(customerFound, is(Optional.of(customer)));
     }
