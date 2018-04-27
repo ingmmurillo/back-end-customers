@@ -39,7 +39,7 @@ public class CustomerControllerTest {
         Customer customer = new Customer("Mauricio", "Murillo");
         given(customerRepository.findByLastName("Murillo")).willReturn(Optional.of(customer));
 
-        String customerFullName = subject.getCustomer("Murillo");
+        String customerFullName = subject.getCustomer("Mur");
 
         assertThat(customerFullName, is("Mauricio Murillo"));
     }
